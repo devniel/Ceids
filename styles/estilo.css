@@ -1,0 +1,703 @@
+* {
+border:0;
+padding:0;
+margin:0;
+}
+
+/* -------------------------
+	FONT
+	-----------------------*/
+	
+@font-face {
+    font-family: 'DroidSansMonoRegular';
+    src: url('/fonts/DroidSansMono-webfont.eot');
+    src: url('/fonts/DroidSansMono-webfont.eot?#iefix') format('eot'),
+         url('/fonts/DroidSansMono-webfont.woff') format('woff'),
+         url('/fonts/DroidSansMono-webfont.ttf') format('truetype'),
+         url('/fonts/DroidSansMono-webfont.svg#webfontGfEdEDfv') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sansation';
+    src: url('/fonts/Sansation_Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sansation_Bold';
+    src: url('/fonts/Sansation_Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+html,body {
+	height:100%;
+}
+
+body {
+	background:#FFF;
+}
+
+#header {
+	width:100%;
+	height:120px;
+	background:#F7F7F7;
+	border-bottom:1px solid #EBEBEB;
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.10, #F7F7F7),color-stop(0.90,#FBFBFB));
+	-webkit-box-shadow:0px 1px 10px #F5F5F5;
+	-moz-box-shadow:0px 1px 10px #F5F5F5;
+}
+
+#header .header-user {	
+	width:100%;
+	height:40px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+#header .header-user .header-user-inner {
+	width:980px;
+	margin:0 auto;
+}
+
+/* ------
+	HEADER USER INNER 
+	----- */
+#header .header-user .header-user-inner .user {
+	background:#F9F9F9;
+	-webkit-box-shadow:0px 0px 5px #C0C0C0;
+	-moz-box-shadow:0px 0px 5px #C0C0C0;
+	margin-bottom:15px;
+	float:right;
+	margin-right:15px;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.10, #F8F8F8),color-stop(0.90,#FDFDFD));
+	position:relative;
+	z-index:400;
+}
+
+#header .header-user .header-user-inner .user ul li {
+	margin-right:10px;
+}
+
+
+#header .header-user .header-user-inner .user ul li a,#header .header-user .header-user-inner .user ul li{
+	float:left;
+	font:11px "Tahoma","Arial";
+	font-weight:bold;
+	color:#000;
+	line-height:40px;
+	text-shadow:0px 1px 0px #FFF;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+#header .header-user .header-user-inner .user ul li:hover a , #header .header-user .header-user-inner .user ul li:hover span{
+	color:#426177
+}
+
+#header .header-user .header-user-inner .user li.profile {
+	float:left;
+}
+
+#header .header-user .header-user-inner .user li.profile span {
+	font:11px "Tahoma","Arial","Ubuntu";
+	font-weight:bold;
+	line-height:40px;
+	color:#000;
+	text-shadow:0px 1px 0px #FFF
+}
+
+#header .header-user .header-user-inner .user img {
+	height:20px;
+	margin-top:10px;
+	float:left;
+	margin-right:5px;
+}
+
+#header .header-user .header-user-inner .user ul {
+	list-style:none;
+	padding:0;
+	float:right;
+	margin-left:10px;
+	line-height:40px;
+}
+
+#header .inner-header {
+	width:980px;
+	margin:0 auto;
+	position:relative;
+	z-index:300;
+}
+
+#header .inner-header .logo {
+	margin-top:6px;
+	margin-left:0px;
+	float:left;
+	margin-right:20px;
+}
+
+/*-----
+	HEADER USER LOGIN
+	----*/
+	
+#header .header-user .header-user-inner .login {
+	float:right;
+	margin-top:20px;
+	margin-right:20px;
+	position:relative;
+	z-index:400;
+}
+
+/*----
+	HEADER MENU
+	----*/
+	
+#header .menu {
+	float:right;
+	font:13px "Tahoma","Arial","Ubuntu";
+	font-weight:bold;
+	line-height:70px;
+	color:#333;
+	text-shadow:0px 0px 0px #39C;
+	margin-right:20px;
+}
+
+#header .menu ul {
+	list-style:none;
+	padding:0;	
+}
+
+#header .menu ul li {
+	float:left;
+	margin-left:10px;
+	cursor:pointer;
+	display:block
+}
+
+#header .menu ul li a {
+	text-decoration:none;
+	color:#007F9E;
+	text-shadow:0px 0px 1px #CCC;
+}
+
+#header .menu ul li a:hover {
+	color:#0B5460;
+}
+
+/*------------------------
+	WRAPPER
+	----------------------*/
+
+#wrapper{
+	width:980px;
+	margin:0px auto;
+	background:transparent;
+	position:relative;
+	z-index:0;
+	min-height: 91.5%;
+	height: auto !important;
+	height: 91.5%;
+	margin: 0 auto -30px; /* el margen inferior es el valor del pie en negativo */;
+	
+	margin-top:-50px;
+}
+
+/* ------------------------------------------------------------------------------------------
+								S C R O L L 
+	------------------------------------------------------------------------------------------------*/
+	
+#scroll_vista {
+	padding:13px;
+	background:url(../img/fondos/fondo_scroll.png) no-repeat;
+	position:relative;
+	border-radius:10px;
+	width:955px;
+	height:340px;
+	float:left;
+	margin-bottom:20px;
+}
+
+#scroll_cuerpo {
+	margin:0 auto;
+	height:315px; 	
+	position:relative;
+	overflow:hidden;
+	}
+
+#scroll_cuerpo .tira_imagenes {
+	position:absolute;
+	top:0;
+	left:0;
+	
+}
+
+#scroll_cuerpo .tira_imagenes img {
+	position:absolute;
+	top:0;
+	left:0;
+	width:956px;
+	height:310px;
+}
+
+#scroll_cuerpo img  {
+	/*width:980px;
+	height:300px;*/
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	cursor:pointer;
+}
+
+/* ------------------------------------------------------------------------------------------
+								N A V E G A C I Ã" N   -  S L I D E R
+	------------------------------------------------------------------------------------------------*/
+	
+.navegacion {
+	width:100%;
+	text-align:center;
+	padding-top:10px;
+	display:block; /* oculto por defecto, serÃ¡ mostrado luego con jquery */
+}
+
+.navegacion a{
+	padding:0px 8px 10px 8px;
+	background:url(../img/boton/boton_0.png) no-repeat;
+	text-decoration:none;
+	color:#CCC;
+}
+
+
+.navegacion a.active {
+	font-weight:bold;
+	/*background:#9C6;*/
+}
+
+.navegacion a:hover {
+	font-weight:bold;
+	background:url(../img/boton/boton_1.png) no-repeat;
+}
+
+img.oculto {
+	opacity:0;
+}
+img.visible {
+	opacity:1;
+}
+
+
+
+#wrapper #cont {
+	width:950px;
+	margin:0 auto;
+}
+
+/*---------------------------------------------------
+	TEAMS
+-----------------------------------------------*/
+
+/* 660 px */
+
+#wrapper #teams {
+	width:100%;
+	height:auto;
+	float:left;
+}
+
+#wrapper #teams .team {
+	width:310px;
+	/*font:11px Tahoma;*/
+	color:#666;
+	line-height:15px;
+	float:left;
+	margin-left:5px;
+}
+
+#wrapper #teams .team p {
+	font:11px Tahoma;
+	color:#666;
+	line-height:15px;
+}
+
+#wrapper #teams .team  .team-title{
+	margin-bottom:10px;
+	font-family:"Tahoma","Arial","Ubuntu";
+	color:#333;
+	text-shadow:0px 1px 1px #DDD;
+}
+
+#wrapper #teams .team  .team-img{
+	height:80px;
+	float:left;
+	margin-right:10px;
+	width:70px;
+}
+
+#wrapper #teams .team  .team-img img{
+	height:70px;
+}
+
+/*---------------------------------------------------
+	PROJECTS
+-----------------------------------------------*/
+#wrapper #projects {
+	width:100%;
+	height:5px;
+	background:#f2f2f2;
+	float:left;
+	margin:30px auto;
+	border-radius:5px;
+	-webkit-box-shadow:0px 0px 2px #CCC;
+}
+
+::selection {
+	background: #07A;
+	color: white;
+	text-shadow: none;
+}
+
+
+/*---------------------------------------------------
+	EVENTS
+-----------------------------------------------*/
+
+/* 660 px */
+
+#wrapper #events {
+	width:300px;
+	height:auto;
+	/*border-right:1px solid #E1E1E1;*/
+	float:left;
+	padding-right:10px;
+	padding-left:10px;
+}
+
+#wrapper #events .events-title {
+	width:280px;
+	height:auto;
+	border-bottom:1px solid #EAEAEA;
+	font-family:"Tahoma","Arial","Ubuntu";
+	color:#333;
+	text-shadow:0px 1px 1px #DDD;	
+	/*background:url(../img/tango-icon-theme-0.8.90/16x16/apps/office-calendar.png) left top no-repeat;
+	padding-left:20px;*/
+	padding-bottom:5px;
+	margin-bottom:5px;
+}
+
+#events ul {
+	list-style:none;
+	padding:0;
+}
+
+#events ul li {
+	border-bottom:1px solid #F0F7F9	;
+	padding-bottom:5px;
+	margin-bottom:5px;
+}
+
+#events ul li .event-description{
+	width:100%;
+	display:block;
+	height:auto;
+	background:none;
+	font:11px Tahoma;
+	color:#666;
+	line-height:15px;
+}
+
+#events ul li .event-description .event-description-picture{
+	float:right;
+	width:100px;
+	display:inline
+}
+
+#events ul li .event-description a{
+	width:100%;
+	font:11px "Tahoma","Arial","Ubuntu" !important;
+	font-weight:bold;
+	margin-bottom:5px;
+	line-height:20px;
+	color:#007F9E;
+	text-decoration:none
+}
+
+#events ul li a:hover {
+	text-decoration:underline;
+}
+
+#events ul li a {
+	width:100%;
+	font:13px "Tahoma","Arial";
+	font-weight:bold;
+	margin-bottom:5px;
+	line-height:20px;
+	color:#007F9E;
+	text-decoration:none
+}
+
+#events ul li span.date{
+	width:100%;
+	font:11px "Tahoma","Arial";
+	line-height:20px;
+	color:#999;
+	text-decoration:none;
+	margin-left:10px;
+}
+
+/*---------------------------------------------------
+	FEED FACEBOOK
+-----------------------------------------------*/
+
+/* 660 px */
+
+#wrapper #feed {
+	width:300px;
+	height:auto;
+	float:left;
+	padding-right:10px;
+	padding-left:10px;
+}
+
+#wrapper #feed .feed-title{
+	width:280px;
+	height:auto;
+	border-bottom:1px solid #EAEAEA;
+	font-family:"Tahoma","Arial";
+	color:#333;
+	text-shadow:0px 1px 1px #DDD;	
+	/*background:url(../img/tango-icon-theme-0.8.90/16x16/apps/office-calendar.png) left top no-repeat;
+	padding-left:20px;*/
+	padding-bottom:5px;
+	margin-bottom:5px
+}
+
+#feed ul {
+	list-style:none;
+	padding:0;
+}
+
+#feed ul li {
+	border-bottom:1px solid #F0F7F9	;
+	padding-bottom:5px;
+	margin-bottom:5px;
+	font:11px Tahoma;
+	color:#666;
+	line-height:15px;
+}
+
+/*#feed ul li.postmin:hover {
+	background:#EBEBEB;
+	cursor:pointer;
+}*/
+
+#feed ul li i {
+	display:inline;
+	width:15px;
+	height:15px;
+	background:#CCC;
+	float:left;
+	margin-right:5px;
+}
+
+#feed ul li i.message {
+	background:url('../img/mini/comment.gif') center no-repeat;
+}
+
+#feed ul li i.link {
+	background:url('../img/mini/globe.gif') center no-repeat;
+}
+
+#feed ul li a:hover {
+	text-decoration:underline;
+}
+
+#feed ul li a {
+	width:100%;
+	font:11px "Tahoma","Arial" !important;
+	font-weight:bold;
+	margin-bottom:5px;
+	line-height:20px;
+	color:#007F9E;
+	text-decoration:none
+}
+
+/*---------------------------------------------------
+	apps
+-----------------------------------------------*/
+
+#wrapper #sidebar {
+	width:300px;
+	float:right;
+}
+
+#wrapper #apps {
+	width:300px;
+	height:auto;
+	float:left;
+	padding-right:10px;
+}
+
+#wrapper #apps .feed-title{
+	width:280px;
+	height:auto;
+	border-bottom:1px solid #EAEAEA;
+	font-family:"Tahoma","Arial";
+	color:#333;
+	text-shadow:0px 1px 1px #DDD;	
+	/*background:url(../img/tango-icon-theme-0.8.90/16x16/apps/office-calendar.png) left top no-repeat;
+	padding-left:20px;*/
+	padding-bottom:5px;
+	margin-bottom:5px
+}
+
+/*---------------------------------------------------
+	APPS
+-----------------------------------------------*/
+
+/* SIDEBAR - WIDTH : 260 */
+
+
+#apps .app {
+	width:100%;
+	/*background:#F6F6F6;*/
+	margin-bottom:5px;
+}
+
+#apps .app:hover {
+	background:none
+}
+
+#apps .app .app-image {
+	width:50px;
+	height:50px;
+	float:left;	
+}
+
+#apps .app .app-image img {
+	width:50px;
+	height:50px;
+	border-radius:5px;
+	-webkit-box-shadow:0px 1px 1px #C0C0C0;
+}
+
+#apps .app .app-info {
+	/*width:235px;*/
+	width:100%;
+	height:50px;
+	float:left;
+	padding-left:5px;
+	color:#424242
+}
+
+#apps .app .app-info .app-title a {
+	width:100%;
+	font:13px "Tahoma","Arial";
+	font-weight:bold;
+	text-shadow:0px 0px 1px #EAEAEA;
+	color:#07A;
+	text-decoration:none;
+}
+
+#apps .app .app-info .app-title a:hover{
+	text-decoration:underline;
+}
+
+#apps .app .app-info .app-description {
+	font:11px "Tahoma","Arial";
+}
+
+#apps .app .app-metainfo {
+	width:100%;
+	float:left;
+	margin-top:10px;
+	border-top:1px solid #D5D5D5;
+	padding-top:5px;
+	display:none;
+}
+
+#apps .app .app-metainfo .app-developers {
+	with:100%;
+	float:left;
+	font:11px "Tahoma","Arial";
+	font-weight:bold;
+	color:#424242;
+	margin-bottom:5px;
+}
+
+#apps .app .app-metainfo .app-developers .app-developer {
+	width:30px;
+	margin-top:5px;
+}
+
+
+#apps .app .app-metainfo .app-link {
+	with:100%;
+	float:left;
+	font:11px "Tahoma","Arial";
+	font-weight:bold;
+	color:#424242
+}
+
+#apps .app .app-metainfo .app-link  a{
+	background:url(../img/mini/globe.gif) left no-repeat;
+	padding-left:16px;
+	color:#007F9E
+}
+
+
+/*---------------------------------------------------
+	apps - STUDENTS
+-----------------------------------------------*/
+
+/* apps - WIDTH : 260 */
+
+#apps .students {
+	width:100%;
+	height:200px;	
+}
+
+#apps .students-header {
+	width:100%;
+	font:11px "Tahoma","Arial";
+	font-weight:bold;
+	margin-bottom:5px;
+	height:20px;
+	line-height:20px;
+	border-bottom:1px solid #D5D5D5
+}
+
+#apps .student {
+	width:30px;
+	height:30px;
+	margin-right:5px;
+	margin-bottom:5px;
+	float:left;
+}
+
+#apps .student img {
+	width:100%;
+	height:100%;
+}
+
+#footer {
+	width:100%;
+	height:20px;
+	background:#2D2D2D;
+
+	float:left;
+	margin-top:50px;
+	
+	text-align:center;
+	color:#D5D5D5;
+	line-height:50px;
+	padding-top:10px;
+	font:10px Tahoma;
+}
